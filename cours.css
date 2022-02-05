@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
+* {
+    box-sizing: border-box;
+  }
+  
+  html, body{
+    margin: 0;
+    width: 100%;
+  }
+
+  .top-container{
+    display:flex;
+    height: 60px;
+  }
+
+  .back-button{
+      border: 10px;
+  }
+
+  .back-part{
+    display: flex;
+    align-items: center;
+    width: 350px;
+    height: 100%;
+    padding:10px;
+    background-color: #222831;
+  }
+
+  .course-title{
+    color: white;
+    font-family: 'Salsa', cursive;
+    text-decoration: none;
+    margin: 0;
+    padding-left: 20px;
+    font-size: 20px;
+  }
+
+  .menu-wrapper{
+    background-color: #F6E9E9;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .menu-parent{
+    display: inline;
+    padding: 25px;
+    list-style-type: none;
+  }
+
+  .menu-element{
+    display: inline;
+    font-family: 'Salsa', cursive;
+    text-decoration: none;
+    font-size: 26px;
+    border: 10%;
+  }
