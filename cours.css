@@ -3,6 +3,7 @@
 
 * {
     box-sizing: border-box;
+    overflow-y: hidden;
   }
   
   html, body{
@@ -22,7 +23,8 @@
   .back-part{
     display: flex;
     align-items: center;
-    width: 350px;
+    min-width: 280px;
+    width: 280px;
     height: 100%;
     padding:10px;
     background-color: #222831;
@@ -37,23 +39,226 @@
     font-size: 20px;
   }
 
-  .menu-wrapper{
+  nav {
     background-color: #F6E9E9;
     padding: 10px;
     width: 100%;
     height: 100%;
   }
 
-  .menu-parent{
-    display: inline;
-    padding: 25px;
-    list-style-type: none;
+  .menu-wrapper{
+    display: flex;
   }
 
   .menu-element{
+    overflow-x: hidden;
     display: inline;
+    white-space: nowrap;
     font-family: 'Salsa', cursive;
     text-decoration: none;
-    font-size: 26px;
-    border: 10%;
+    margin-top: 5px;
+    font-size: 22px;
+    width: 90%;
+    text-align: center;
+    text-decoration: none;
+    color: black;
   }
+
+  .mobile-menu, #toggle{
+      display: none;
+  }
+
+  .has-sub{
+    list-style-type: none;
+    padding-left: 0px;
+  }
+
+  ul{
+    margin: 0;
+    padding: 0;
+  }
+    
+  li{
+    display: block
+  }
+    
+.accordion-menu{
+  background-color: #EEEEEE;
+
+}
+  .sub > li {
+    height: 0;
+    overflow: hidden;
+  }
+
+  .menu{
+      cursor: pointer;
+      display: 	flex;
+      flex-direction: column;
+      padding-top: 5px;
+      padding-bottom: 5px;
+  }
+
+.body-container{
+    display: flex;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    min-height: calc(100vh - 61px);
+    max-height: calc(100vh - 61px);
+}
+
+.accordion{
+    min-width: 280px;
+    width: 280px;
+    height: 100%;
+    padding-left: 0px;
+    overflow-y: auto;
+}
+
+  input[type="radio"], input[type="checkbox"] {
+    display: none
+  }
+
+  input:checked + .sub > li {
+    height: 2em;
+    cursor: pointer;
+}
+
+input:checked + .sub > hr {
+  display: block;
+}
+
+.pdf-viewer{
+  padding: 0;
+  border: 0;
+  margin: 0;
+  width: calc(100vw - 280px);
+  height: calc(100vh - 58px);
+  background-color: #333333;
+}
+
+.separator{
+  margin: 0;
+  border: 1;
+  width: 100%;
+}
+
+#pdf-window{
+  padding: 0;
+  border: 0;
+  margin: 0;
+  width: 100%;
+  height: calc(100vh - 60px);
+}
+
+.accordion-title{
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Salsa', cursive;
+  font-size: 18px;
+}
+
+.title{
+  padding-left: 5px;
+  text-decoration: none;
+  font-family: 'Salsa', cursive;
+  font-size: 18px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.subtitle{
+  padding-left: 5px;
+  text-decoration: none;
+  font-family: 'Salsa', cursive;
+  font-size: 16px;
+  color: #a9a9a9;
+}
+
+ul {
+  padding-left: 5px;
+  text-decoration: none;
+  font-family: 'Salsa', cursive;
+  font-size: 14px;
+}
+
+  @media all and (max-width: 991px)
+  {
+    *{
+      overflow-y: auto;
+    }
+
+    #pdf-window{
+      display: none;
+    }
+
+    .pdf-viewer{
+      display: none;
+    }
+
+    .course-title{
+        text-align: center;
+    }
+
+    .back-part{
+        width: 100%;
+    }
+
+    nav
+    {
+        display: flex;
+        width: 60%;
+        height: 60px;
+    }
+ 
+    nav .menu-wrapper 
+    {
+        display: none;
+    }
+ 
+    .menu-element{
+        width: 100%;
+        border: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 1px;
+    }
+
+    .mobile-menu 
+    {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 40px;
+        color: black;
+        cursor: pointer;
+        overflow-y: hidden;
+    }
+
+    #toggle:checked + .menu-wrapper {
+        display: flex;
+        flex-direction: column;
+        position:absolute; 
+        left:0px; 
+        top:60px;
+        width: 100%;
+        background-color: #F6E9E9;
+    }
+
+    .body-container{
+      height: calc(100vh - 83px);
+    }
+
+    .accordion-menu{
+      height: 100%;
+    }
+
+    .accordion{
+        height: 100%;
+        width: 100vw;
+        overflow-y: auto;
+    }
+}

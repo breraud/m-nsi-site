@@ -4,32 +4,98 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../cours.css">
-	<title>Cours Seconde</title>
+	<script src="../script.js"></script>
+
+
+    </script>
+    <title>Cours Seconde</title>
+
 </head>
 <body>
     <header>
         <div class="top-container">
             <div class="back-part">
+                <a href="../index.html">
                 <svg class="back-button" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="36" height="36" rx="18" fill="white"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5892 11.0892C18.9147 10.7638 18.9147 10.2362 18.5892 9.91073C18.2638 9.5853 17.7361 9.5853 17.4107 9.91073L9.9107 17.4107C9.58527 17.7362 9.58527 18.2638 9.9107 18.5892L17.4107 26.0892C17.7361 26.4147 18.2638 26.4147 18.5892 26.0892C18.9147 25.7638 18.9147 25.2362 18.5892 24.9107L12.5118 18.8333H25.5C25.9602 18.8333 26.3333 18.4602 26.3333 18C26.3333 17.5398 25.9602 17.1667 25.5 17.1667H12.5118L18.5892 11.0892Z" fill="#190134"/>
-                    </svg>
+                    </svg></a>
                 <p class="course-title">Maths - Seconde</p>
             </div>
-            <div class="menu-wrapper">
-                    <a href="" class="menu-element">Accueil</a>
-                    <a href="" class="menu-element">Savoir Faire</a>
-                    <a href="" class="menu-element">Python</a>
-                    <a href="" class="menu-element">Les maths, inutile ?</a>
-            </div>
+            <nav>
+                <label class="mobile-menu" for="toggle">☰</label>
+                <input type="checkbox" id="toggle">
+                <div class="menu-wrapper">
+                    <a href="#" class="menu-element" onclick="changeData('../pdf/msec/rien.pdf')">Accueil</a>
+                    <a href="#" class="menu-element" onclick="changeData('../pdf/msec/python.pdf')">Python</a>
+                    <a href="#" class="menu-element" onclick="changeData('../pdf/msec/rien.pdf')">Les maths, inutile ?</a>
+                </div>
+            </nav>
         </div>
     </header>
 
-    <div class="Accordeon Menu">
+    <div class="body-container">
+        <div class="accordion-menu">
+        <p class="accordion-title">Selection des cours</p>
+           <ul class="accordion">
 
-    </div>
-    <div class="cours-container">
+            <li class="has-sub">
+              <hr class="separator">
+              <label class="menu" for="menu1"><p class='title'>Chapitre 1</p><p class="subtitle">Nombres et intervalles</p></label>
+              <input id="menu1" type="checkbox" name="menu" />
+              <ul class="sub">
+                <li onclick="changeData('../pdf/msec/m_2_ch1_1.pdf')">Les ensembles de nombres</li>
+                <li onclick="openURL('https://doctools.dgpad.net/exam.php?datas=eyJiYXNlaWQiOiIxWHhYckM2cFFlZzlWdzNVa1I1NzJFTFY0VUV1Y3Q5Q0pkQkJFNGhQX3NubyIsImRlX2Jhc2UiOiIxNWtnV0tfQmNXenhnSER5NjlrVDUyc0ZacmpUSmNsSDg2V19kMWFhNERxTSIsImlkIjoiMVlWRV9mSnJ1YkxoQzlRMl9VMkxQRXZ4YzRiYmZ0Qk5EZjJhaTllUjZ3b28iLCJ1c2VycyI6IkFub255bWUifQ==')">QCM pour s'entraîner avant l'IE</li>
+                <li onclick="changeData('../pdf/msec/m_2_ch1_2.pdf')">Les intervalles</li>
+                <li onclick="changeData('../pdf/msec/m_2_ch1_3.pdf')">Les puissances</li>
+                <li onclick="changeData('../pdf/msec/m_2_ch1_4.pdf')">Les racines carrées</li>
+                <li onclick="changeData('../pdf/msec/m_2_ch1_5.pdf')">La valeur absolue</li>
+              </ul>
+            </li>
 
+            <li class="has-sub">
+              <hr class="separator">
+              <label class="menu" for="menu2"><p class='title'>Chapitre 2</p><p class="subtitle">Généralités sur les fonctions</p></label>
+              <input id="menu2" type="checkbox" name="menu" />
+              <ul class="sub">
+                <li onclick="changeData('../pdf/msec/m_2_generalites_fonctions_1.pdf')">La notion de fonction</li>
+                <li onclick="changeData('../pdf/msec/m_2_generalites_fonctions_2.pdf')">Courbe représentative de fonction</li>
+                <li>QCM Lectures graphiques !</li>
+                <li onclick="changeData('../pdf/msec/m_2_generalites_fonctions_3.pdf')">Fonction paire, fonction impaire</li>
+                <li onclick="changeData('../pdf/msec/m_2_generalites_fonctions_4.pdf')">Variations de fonction</li>
+                <li onclick="changeData('../pdf/msec/m_2_generalites_fonctions_5.pdf')">Extrema de fonctions</li>
+                <li>QCM d'auto évaluation !</li>
+              </ul>
+            </li>
+
+            <li class="has-sub">
+                <hr class="separator">
+                <label class="menu" for="menu3"><p class='title'>Chapitre 3</p><p class="subtitle">Les vecteurs du plan</p></label>
+                <input id="menu3" type="checkbox" name="menu"/>
+                <ul class="sub">
+                  <li onclick="changeData('../pdf/msec/vecteurs_1.pdf')">Qu'est ce qu'un vecteur ?</li>
+                  <li onclick="changeData('../pdf/msec/vecteurs_2.pdf')">Opérations sur les vecteurs ?</li>
+                  <li onclick="changeData('../pdf/msec/vecteurs_3.pdf')">Vecteurs colinéaires</li>
+                </ul>
+            </li>
+
+            <li class="has-sub">
+                <hr class="separator">
+                <label class="menu" for="menu4"><p class='title'>Chapitre 4</p><p class="subtitle">Arithmétique</p></label>
+                <input id="menu4" type="checkbox" name="menu"/>
+                <ul class="sub">
+                    <li onclick="changeData('../pdf/msec/arithmetique_1.pdf')">Divisibilité</li>
+                    <li onclick="changeData('../pdf/msec/arithmetique_2.pdf')">Les nombres premiers</li>
+                </ul>
+            </li>
+
+
+            <hr class="separator">
+          </ul> 
+        </div>
+        <div class="pdf-viewer">
+                <object data="../test.pdf" type="application/pdf" id="pdf-window" width="600" height="500"> </object>
+        </div>
     </div>
 </body>
 </html>
