@@ -95,7 +95,21 @@
         </div>
         <div class="pdf-viewer" id ="viewer">
                 <!--<object data="../test.pdf" type="application/pdf" id="pdf-window" width="600" height="500"> </object>-->
-                <embed src="../test.pdf" width="500" height="375" type="application/pdf" id="pdf-window">
+                <!--<embed src="../test.pdf" width="500" height="375" type="application/pdf" id="pdf-window">-->
+                    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+                    <script type="text/javascript">
+                      document.addEventListener("adobe_dc_view_sdk.ready", function(){
+                        var adobeDCView = new AdobeDC.View({clientId: "a1ab5776e4aa4a258d9a02a32e7c5ff7", divId: "viewer"});
+                        adobeDCView.previewFile({
+                          content:{ location:
+                            { url: "https://documentcloud.adobe.com/view-sdk-demo/PDFs/Bodea%20Brochure.pdf"}},
+                          metaData:{fileName: "Bodea Brochure.pdf"}
+                        },
+                        {
+                          embedMode: "SIZED_CONTAINER"
+                        });
+                      });
+                    </script>
         </div>
     </div>
 </body>
