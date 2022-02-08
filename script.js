@@ -6,7 +6,7 @@ function changeData(newURL) {
     else{
         openURL(newURL)
     }*/
-    document.getElementById("pdf-window").setAttribute('data', newURL);
+    document.getElementById("pdf-window").setAttribute('src', newURL);
 }
 
 function openURL(URL){
