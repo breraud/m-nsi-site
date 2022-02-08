@@ -1,103 +1,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
 
-* {
-    box-sizing: border-box;
-    overflow-y: hidden;
-  }
+*{
+  box-sizing: border-box;
+  overflow-y: hidden;
+}
+
+html, body{
+  margin: 0;
+  width: 100%;
+}
+
+.top-container{
+  display:flex;
+  height: 60px;
+}
+
+.back-button{
+    border: 10px;
+}
+
+.back-part{
+  display: flex;
+  align-items: center;
+  min-width: 280px;
+  width: 280px;
+  height: 100%;
+  padding:10px;
+  background-color: #222831;
+}
+
+.course-title{
+  color: white;
+  font-family: 'Salsa', cursive;
+  text-decoration: none;
+  margin: 0;
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+nav {
+  background-color: #F6E9E9;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-wrapper{
+  display: flex;
+}
+
+.menu-element{
+  overflow-x: hidden;
+  display: inline;
+  white-space: nowrap;
+  font-family: 'Salsa', cursive;
+  text-decoration: none;
+  margin-top: 5px;
+  font-size: 22px;
+  width: 90%;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.mobile-menu, #toggle{
+    display: none;
+}
+
+.has-sub{
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
   
-  html, body{
-    margin: 0;
-    width: 100%;
-  }
-
-  .top-container{
-    display:flex;
-    height: 60px;
-  }
-
-  .back-button{
-      border: 10px;
-  }
-
-  .back-part{
-    display: flex;
-    align-items: center;
-    min-width: 280px;
-    width: 280px;
-    height: 100%;
-    padding:10px;
-    background-color: #222831;
-  }
-
-  .course-title{
-    color: white;
-    font-family: 'Salsa', cursive;
-    text-decoration: none;
-    margin: 0;
-    padding-left: 20px;
-    font-size: 20px;
-  }
-
-  nav {
-    background-color: #F6E9E9;
-    padding: 10px;
-    width: 100%;
-    height: 100%;
-  }
-
-  .menu-wrapper{
-    display: flex;
-  }
-
-  .menu-element{
-    overflow-x: hidden;
-    display: inline;
-    white-space: nowrap;
-    font-family: 'Salsa', cursive;
-    text-decoration: none;
-    margin-top: 5px;
-    font-size: 22px;
-    width: 90%;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-  }
-
-  .mobile-menu, #toggle{
-      display: none;
-  }
-
-  .has-sub{
-    list-style-type: none;
-    padding-left: 0px;
-  }
-
-  ul{
-    margin: 0;
-    padding: 0;
-  }
-    
-  li{
-    display: block
-  }
-    
+li{
+  display: block
+}
+  
 .accordion-menu{
   background-color: #EEEEEE;
 
 }
-  .sub > li {
-    height: 0;
-    overflow: hidden;
-  }
+.sub > li {
+  height: 0;
+  overflow: hidden;
+}
 
-  .menu{
-      cursor: pointer;
-      display: 	flex;
-      flex-direction: column;
-      padding-top: 5px;
-      padding-bottom: 5px;
-  }
+.menu{
+    cursor: pointer;
+    display: 	flex;
+    flex-direction: column;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
 
 .body-container{
     display: flex;
@@ -116,17 +116,17 @@
     overflow-y: auto;
 }
 
-  input[type="radio"], input[type="checkbox"] {
-    display: none
-  }
-
-  input:checked + .sub > li {
-    height: 2em;
-    cursor: pointer;
+input[type="radio"], input[type="checkbox"] {
+  display: none
 }
 
-input:checked + .sub > hr {
-  display: block;
+input:checked + .sub > li {
+  height: 2em;
+  cursor: pointer;
+}
+
+input:checked + .sub{
+  margin-top: 10px;
 }
 
 .pdf-viewer{
@@ -140,7 +140,6 @@ input:checked + .sub > hr {
 
 .separator{
   margin: 0;
-  border: 1;
   width: 100%;
 }
 
@@ -183,8 +182,7 @@ ul {
   font-size: 14px;
 }
 
-  @media all and (max-width: 991px)
-  {
+  @media all and (max-width: 991px){
     *{
       overflow-y: auto;
     }

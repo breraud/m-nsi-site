@@ -35,13 +35,13 @@
     </header>
 
     <div class="body-container">
-        <div class="accordion-menu">
+        <div class="accordion-menu" id="menu">
         <p class="accordion-title">Selection des cours</p>
            <ul class="accordion">
 
             <li class="has-sub">
               <hr class="separator">
-              <label class="menu" for="menu1"><p class='title'>Chapitre 1</p><p class="subtitle">Nombres et intervalles</p></label>
+              <label class="menu" for="menu1"><p class='title'>Chapitre 1 :</p><p class="subtitle">Nombres et intervalles</p></label>
               <input id="menu1" type="checkbox" name="menu" />
               <ul class="sub">
                 <li onclick="changeData('../pdf/msec/m_2_ch1_1.pdf')">Les ensembles de nombres</li>
@@ -55,7 +55,7 @@
 
             <li class="has-sub">
               <hr class="separator">
-              <label class="menu" for="menu2"><p class='title'>Chapitre 2</p><p class="subtitle">Généralités sur les fonctions</p></label>
+              <label class="menu" for="menu2"><p class='title'>Chapitre 2 :</p><p class="subtitle">Généralités sur les fonctions</p></label>
               <input id="menu2" type="checkbox" name="menu" />
               <ul class="sub">
                 <li onclick="changeData('../pdf/msec/m_2_generalites_fonctions_1.pdf')">La notion de fonction</li>
@@ -70,7 +70,7 @@
 
             <li class="has-sub">
                 <hr class="separator">
-                <label class="menu" for="menu3"><p class='title'>Chapitre 3</p><p class="subtitle">Les vecteurs du plan</p></label>
+                <label class="menu" for="menu3"><p class='title'>Chapitre 3 :</p><p class="subtitle">Les vecteurs du plan</p></label>
                 <input id="menu3" type="checkbox" name="menu"/>
                 <ul class="sub">
                   <li onclick="changeData('../pdf/msec/vecteurs_1.pdf')">Qu'est ce qu'un vecteur ?</li>
@@ -81,7 +81,7 @@
 
             <li class="has-sub">
                 <hr class="separator">
-                <label class="menu" for="menu4"><p class='title'>Chapitre 4</p><p class="subtitle">Arithmétique</p></label>
+                <label class="menu" for="menu4"><p class='title'>Chapitre 4 :</p><p class="subtitle">Arithmétique</p></label>
                 <input id="menu4" type="checkbox" name="menu"/>
                 <ul class="sub">
                     <li onclick="changeData('../pdf/msec/arithmetique_1.pdf')">Divisibilité</li>
@@ -93,7 +93,7 @@
             <hr class="separator">
           </ul> 
         </div>
-        <div class="pdf-viewer">
+        <div class="pdf-viewer" id ="viewer">
                 <object data="../test.pdf" type="application/pdf" id="pdf-window" width="600" height="500"> </object>
         </div>
     </div>
