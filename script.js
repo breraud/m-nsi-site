@@ -6,7 +6,15 @@ function changeData(newURL) {
     else{
         openURL(newURL)
     }*/
-    document.getElementById("pdf-window").setAttribute('src', newURL);
+        var adobeDCView = new AdobeDC.View({clientId: "5486c130612343e9a097b73035401f0f", divId: "viewer"});
+        adobeDCView.previewFile({
+          content:{ location:
+            { url: newURL}},
+          metaData:{fileName: "Arithmétique 1"}
+        },
+        {
+          embedMode: "SIZED_CONTAINER"
+        });
 }
 
 function openURL(URL){
