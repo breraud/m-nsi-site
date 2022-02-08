@@ -1,11 +1,12 @@
 function changeData(newURL) {
 
-    if(window.screen.width > 991){
+    /*if(window.screen.width > 991){
         document.getElementById("pdf-window").setAttribute('data', newURL);
     }  
     else{
         openURL(newURL)
-    }
+    }*/
+    document.getElementById("pdf-window").setAttribute('data', newURL);
 }
 
 function openURL(URL){
