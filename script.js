@@ -7,7 +7,9 @@ document.addEventListener("adobe_dc_view_sdk.ready", function()
    {
       content:   {location: {url: "https://findel2207.github.io/pdf/msec/rien.pdf"}},
       metaData: {fileName: "Accueil"}
-   });
+   },{
+    embedMode: "SIZED_CONTAINER"
+  });
 });
 
 function isIpad(){
