@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../cours.css">
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+	<script src="../script.js"></script>
+  <title>Cours Spé Première</title>
+
+</head>
+<body>
+    <header>
+        <div class="top-container">
+            <div class="back-part">
+                <a href="../index.html">
+                <svg class="back-button" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="36" height="36" rx="18" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5892 11.0892C18.9147 10.7638 18.9147 10.2362 18.5892 9.91073C18.2638 9.5853 17.7361 9.5853 17.4107 9.91073L9.9107 17.4107C9.58527 17.7362 9.58527 18.2638 9.9107 18.5892L17.4107 26.0892C17.7361 26.4147 18.2638 26.4147 18.5892 26.0892C18.9147 25.7638 18.9147 25.2362 18.5892 24.9107L12.5118 18.8333H25.5C25.9602 18.8333 26.3333 18.4602 26.3333 18C26.3333 17.5398 25.9602 17.1667 25.5 17.1667H12.5118L18.5892 11.0892Z" fill="#190134"/>
+                    </svg></a>
+                <p class="course-title">Maths - Première</p>
+            </div>
+            <nav>
+                <label class="mobile-menu" for="toggle">☰</label>
+                <input type="checkbox" id="toggle">
+                <div class="menu-wrapper">
+                    <a href="#" class="menu-element" onclick="changeData('https://jbduthoit.github.io/m_nsi/m/rien.pdf', 'Accueil')">Accueil</a>
+                    <a href="#" class="menu-element" onclick="changeData('https://jbduthoit.github.io/m_nsi/m/2/python.pdf', 'Python')">Python</a>
+                    <a href="#" class="menu-element" onclick="changeData('https://jbduthoit.github.io/m_nsi/m/rien.pdf'), 'Les maths, inutile ?'">Logiciels</a>
+                    <a href="#" class="menu-element hidden" id="menu-btn" onclick="hideMenu()">Menu</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="body-container">
+        <div class="accordion-menu" id="menu">
+        <p class="accordion-title">Selection des cours</p>
+           <ul class="accordion">
+
+            <li class="has-sub">
+              <hr class="separator">
+              <label class="menu" for="menu1"><p class='title'>Chapitre 1 :</p><p class="subtitle">Initiation Python</p></label>
+              <input id="menu1" type="checkbox" name="menu" />
+              <ul class="sub">
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_init_python_1.pdf', 'Découvrir le langage Python')">Découvrir le langage Python</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_init_python_2.pdf', 'Les stuctures SI ALORS, POUR et TANT QUE...')">Les stuctures SI ALORS, POUR et TANT QUE...</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_init_python_3.pdf', 'Les fonctions pythons')">Les fonctions pythons</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_init_python_4.pdf', 'Les séquences : tuple et tableau')">Les séquences : tuple et tableau</li>
+              </ul>
+            </li>
+
+            <li class="has-sub">
+              <hr class="separator">
+              <label class="menu" for="menu2"><p class='title'>Chapitre 2 :</p><p class="subtitle">Représentation des données</p></label>
+              <input id="menu2" type="checkbox" name="menu" />
+              <ul class="sub">
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_representation_1.pdf', 'Représentation des entiers positifs')">Représentation des entiers positifs</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_representation_2.pdf', 'Représentation des entiers relatifs')">Représentation des entiers relatifs</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_representation_3.pdf', 'Représentation des réels')">Représentation des réels</li>
+                <li>Des vidéos pour mieux comprendre le binaire, l'hexadécimal ...</li>
+                <li>Un qcm d'entraînement</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_representation_4.pdf', 'Représentation des caractères')">Représentation des caractères</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_representation_5.pdf', 'Les booléens')">Les booléens</li>
+              </ul>
+            </li>
+
+            <li class="has-sub">
+                <hr class="separator">
+                <label class="menu" for="menu3"><p class='title'>Chapitre 3 :</p><p class="subtitle">Les dictionnaires Python</p></label>
+                <input id="menu3" type="checkbox" name="menu"/>
+                <ul class="sub">
+                    <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_dico_1.pdf', 'Qu\'est ce qu\'un dictionnaire ?')">Qu'est ce qu'un dictionnaire ?</li>
+                    <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_dico_2.pdf', 'Méthodes associées et exercices')">Méthodes associées et exercices</li>
+                </ul>
+            </li>
+
+            <li class="has-sub">
+                <hr class="separator">
+                <label class="menu" for="menu4"><p class='title'>Chapitre 4 :</p><p class="subtitle">Architecture matérielle</p></label>
+                <input id="menu4" type="checkbox" name="menu"/>
+                <ul class="sub">
+                    <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_archi_1.pdf', 'Les circuits intégrés')">Les circuits intégrés</li>
+                    <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_archi_2.pdf', 'A l\'intérieur d\'une unité centrale')">A l'intérieur d'une unité centrale</li>
+                    <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_archi_3.pdf', 'Le modèle de Von Newman')">Le modèle de Von Newman</li>
+                    <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_archi_4.pdf', 'Les différents langages')">Les différents langages</li>
+                    <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_archi_5.pdf', 'Simulation d\'un CPU')">Simulation d'un CPU</li>
+                    <li>S'entraîner avec l'IE de l'an passé !</li>
+
+                </ul>
+            </li>
+
+            <li class="has-sub">
+              <hr class="separator">
+              <label class="menu" for="menu5"><p class='title'>Chapitre 5 :</p><p class="subtitle">Algorithmes</p></label>
+              <input id="menu5" type="checkbox" name="menu"/>
+              <ul class="sub">
+                  <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_algo_1.pdf', 'Intro sur les algorithmes')">Intro sur les algorithmes</li>
+                  <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_algo_2.pdf', 'Recherches de valeurs dans un tableau')">Recherches de valeurs dans un tableau</li>
+                  <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_algo_3.pdf', 'Tri selection')">Tri selection</li>
+                </ul>
+          </li>
+
+          <li class="has-sub">
+            <hr class="separator">
+            <label class="menu" for="menu6"><p class='title'>Chapitre 6 :</p><p class="subtitle">Liste par compréhension</p></label>
+            <input id="menu6" type="checkbox" name="menu"/>
+            <ul class="sub">
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_fonction_derivee_1.pdf', 'La notion de fonction dérivée')">La notion de fonction dérivée</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_fonction_derivee_2.pdf', 'Opérations sur les fonctions dérivées')">Opérations sur les fonctions dérivées</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_fonction_derivee_3.pdf', 'Lien entre signe de f\' et sens de variation de f')">Lien entre signe de f' et sens de variation de f</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_fonction_derivee_4.pdf', 'Extrema d\'une fonction')">Extrema d'une fonction</li>
+            </ul>
+        </li>
+
+        <li class="has-sub">
+          <hr class="separator">
+          <label class="menu" for="menu7"><p class='title'>Chapitre 7 :</p><p class="subtitle">Interactions sur le Web</p></label>
+          <input id="menu7" type="checkbox" name="menu"/>
+          <ul class="sub">
+              <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_suites_1.pdf', 'Définitions et mode de génération')">Définitions et mode de génération</li>
+              <li onclick="openURL('https://notebook.basthon.fr/?from=https://jbduthoit.github.io/m_nsi/m/1/notebook/m_1_suites_1.ipynb')">Python et les suites...</li>
+              <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_suites_2.pdf', 'Variations de suites')">Variations de suites</li>
+              <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_suites_3.pdf', 'Limites de suite')">Limites de suite</li>
+          </ul>
+      </li>
+
+    <!--
+      <li class="has-sub">
+        <hr class="separator">
+        <label class="menu" for="menu8"><p class='title'>Chapitre 8 :</p><p class="subtitle">Système d'exploitation</p></label>
+        <input id="menu8" type="checkbox" name="menu"/>
+        <ul class="sub">
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_suites_sa.pdf', 'Les suites arithmétiques')">Les suites arithmétiques</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_suites_sg.pdf', 'Les suites géométriques')">Les suites géométriques</li>
+        </ul>
+    </li>
+
+    
+    <li class="has-sub">
+        <hr class="separator">
+        <label class="menu" for="menu9"><p class='title'>Chapitre 9 :</p><p class="subtitle">Les données structurées</p></label>
+        <input id="menu9" type="checkbox" name="menu"/>
+        <ul class="sub">
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_trigo_1.pdf', 'Cercle trigonométrique et radian')">Cercle trigonométrique et radian</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_trigo_2.pdf', 'Repérage sur le cercle')">Repérage sur le cercle</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_trigo_3.pdf', 'Cosinus et sinus')">Cosinus et sinus</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_trigo_4.pdf', 'Equations trigonométriques')">Equations trigonométriques</li>
+        </ul>
+    </li>
+
+    
+    <li class="has-sub">
+        <hr class="separator">
+        <label class="menu" for="menu10"><p class='title'>Chapitre 10 :</p><p class="subtitle">Les réseaux</p></label>
+        <input id="menu10" type="checkbox" name="menu"/>
+        <ul class="sub">
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_expo_1.pdf', 'Définition de la fonction exponentielle')">Cercle trigonométrique et radian</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_expo_2.pdf', 'Etude de la fonction exponentielle')">Repérage sur le cercle</li>
+        </ul>
+    </li>
+
+    
+    <li class="has-sub">
+        <hr class="separator">
+        <label class="menu" for="menu11"><p class='title'>Chapitre 11 :</p><p class="subtitle">Intéraction Homme-Machine</p></label>
+        <input id="menu11" type="checkbox" name="menu"/>
+        <ul class="sub">
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_va_1.pdf', 'La notion de variable aléatoire')">La notion de variable aléatoire</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_va_1.pdf', 'Variance d\'une variable aléatoire')">Variance d'une variable aléatoire</li>
+        </ul>
+    </li>
+
+        -->
+
+            <hr class="separator">
+          </ul> 
+        </div>
+        <div class="pdf-viewer" id ="viewer">
+
+        </div>
+    </div>
+</body>
+</html>

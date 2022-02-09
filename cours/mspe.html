@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../cours.css">
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+	<script src="../script.js"></script>
+  <title>Cours Spé Première</title>
+
+</head>
+<body>
+    <header>
+        <div class="top-container">
+            <div class="back-part">
+                <a href="../index.html">
+                <svg class="back-button" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="36" height="36" rx="18" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5892 11.0892C18.9147 10.7638 18.9147 10.2362 18.5892 9.91073C18.2638 9.5853 17.7361 9.5853 17.4107 9.91073L9.9107 17.4107C9.58527 17.7362 9.58527 18.2638 9.9107 18.5892L17.4107 26.0892C17.7361 26.4147 18.2638 26.4147 18.5892 26.0892C18.9147 25.7638 18.9147 25.2362 18.5892 24.9107L12.5118 18.8333H25.5C25.9602 18.8333 26.3333 18.4602 26.3333 18C26.3333 17.5398 25.9602 17.1667 25.5 17.1667H12.5118L18.5892 11.0892Z" fill="#190134"/>
+                    </svg></a>
+                <p class="course-title">Maths - Première</p>
+            </div>
+            <nav>
+                <label class="mobile-menu" for="toggle">☰</label>
+                <input type="checkbox" id="toggle">
+                <div class="menu-wrapper">
+                    <a href="#" class="menu-element" onclick="changeData('https://jbduthoit.github.io/m_nsi/m/rien.pdf', 'Accueil')">Accueil</a>
+                    <a href="#" class="menu-element" onclick="changeData('https://jbduthoit.github.io/m_nsi/m/2/python.pdf', 'Python')">Python</a>
+                    <a href="#" class="menu-element" onclick="changeData('https://jbduthoit.github.io/m_nsi/m/rien.pdf'), 'Les maths, inutile ?'">Les maths, inutile ?</a>
+                    <a href="#" class="menu-element hidden" id="menu-btn" onclick="hideMenu()">Menu</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="body-container">
+        <div class="accordion-menu" id="menu">
+        <p class="accordion-title">Selection des cours</p>
+           <ul class="accordion">
+
+            <li class="has-sub">
+              <hr class="separator">
+              <label class="menu" for="menu1"><p class='title'>Chapitre 1 :</p><p class="subtitle">Le second degré (partie 1)</p></label>
+              <input id="menu1" type="checkbox" name="menu" />
+              <ul class="sub">
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_sec_part1_1.pdf', 'Fonction polynôme du second degré')">Fonction polynôme du second degré</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_sec_part1_2.pdf', 'Variations de la fonction polynôme')">Variations de la fonction polynôme</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_sec_part1_3.pdf', 'Courbe représentative')">Courbe représentative</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_sec_part1_4.pdf', 'Résoudre équations et inéquations')">Résoudre équations et inéquations</li>
+              </ul>
+            </li>
+
+            <li class="has-sub">
+              <hr class="separator">
+              <label class="menu" for="menu2"><p class='title'>Chapitre 2 :</p><p class="subtitle">Le nombre dérivé</p></label>
+              <input id="menu2" type="checkbox" name="menu" />
+              <ul class="sub">
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_derivation_app.pdf', 'Activité préparatoire')">Activité préparatoire</li>
+                <li>Fichier Géogebra</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_derivation_1.pdf', 'Le nombre dérivé')">Le nombre dérivé</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_derivation_2.pdf', 'Tangente à une courbe')">Tangente à une courbe</li>
+                <li>QCM : Lecture du nombre dérivé</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_derivation_3.pdf', 'Nombre dérivé de fonctions usuelles')">Nombre dérivé de fonctions usuelles</li>
+                
+              </ul>
+            </li>
+
+            <li class="has-sub">
+                <hr class="separator">
+                <label class="menu" for="menu3"><p class='title'>Chapitre 3 :</p><p class="subtitle">Les équations de droites (rappels)</p></label>
+                <input id="menu3" type="checkbox" name="menu"/>
+                <ul class="sub">
+                    <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_eq_cart_1.pdf', 'Equations cartésiennes')">Equations cartésiennes</li>
+                    <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_eq_cart_2.pdf', 'Equation réduite')">Equation réduite</li>
+                    <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_eq_cart_3.pdf', 'Position relative de deux droites du plan')">Position relative de deux droites du plan</li>
+                    <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_eq_cart_4.pdf', 'Point d\'intersection de deux droites du plan')">Point d'intersection de deux droites du plan</li>
+                </ul>
+            </li>
+
+            <li class="has-sub">
+                <hr class="separator">
+                <label class="menu" for="menu4"><p class='title'>Chapitre 4 :</p><p class="subtitle">Partie 2 du second degré</p></label>
+                <input id="menu4" type="checkbox" name="menu"/>
+                <ul class="sub">
+                    <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_sec_part2_1.pdf', 'Rappels')">Rappels</li>
+                    <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_sec_part2_2.pdf', 'Résolution de l\'équation trinôme')">Résolution de l'équation trinôme</li>
+                    <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_sec_part2_3.pdf', 'Signe et factorisation')">Signe et factorisation</li>
+                    <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_sec_part2_4.pdf', 'Somme et produit des racines')">Somme et produit des racines</li>
+                    <li>Carte mentale</li>
+                </ul>
+            </li>
+
+            <li class="has-sub">
+              <hr class="separator">
+              <label class="menu" for="menu5"><p class='title'>Chapitre 5 :</p><p class="subtitle">Probabilités conditionnelles</p></label>
+              <input id="menu5" type="checkbox" name="menu"/>
+              <ul class="sub">
+                  <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_proba_cond_1.pdf', 'Rappels de seconde')">Rappels de seconde</li>
+                  <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_proba_cond_2.pdf', 'Probabilités conditionnelles')">Probabilités conditionnelles</li>
+                  <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_proba_cond_3.pdf', 'Formules des probabilités totales')">Formules des probabilités totales</li>
+                  <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_proba_cond_4.pdf', 'Indépendance')">Indépendance</li>
+                  <li>QCM pour réviser le cours</li>
+                  <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/metiers_maths.pdf', 'Découvrir le métier de Biochimiste')">Découvrir le métier de Biochimiste</li>
+                </ul>
+          </li>
+
+          <li class="has-sub">
+            <hr class="separator">
+            <label class="menu" for="menu6"><p class='title'>Chapitre 6 :</p><p class="subtitle">Les fonctions dérivées</p></label>
+            <input id="menu6" type="checkbox" name="menu"/>
+            <ul class="sub">
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_fonction_derivee_1.pdf', 'La notion de fonction dérivée')">La notion de fonction dérivée</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_fonction_derivee_2.pdf', 'Opérations sur les fonctions dérivées')">Opérations sur les fonctions dérivées</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_fonction_derivee_3.pdf', 'Lien entre signe de f\' et sens de variation de f')">Lien entre signe de f' et sens de variation de f</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_fonction_derivee_4.pdf', 'Extrema d\'une fonction')">Extrema d'une fonction</li>
+            </ul>
+        </li>
+
+        <li class="has-sub">
+          <hr class="separator">
+          <label class="menu" for="menu7"><p class='title'>Chapitre 7 :</p><p class="subtitle">Les suites numériques</p></label>
+          <input id="menu7" type="checkbox" name="menu"/>
+          <ul class="sub">
+              <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_suites_1.pdf', 'Définitions et mode de génération')">Définitions et mode de génération</li>
+              <li onclick="openURL('https://notebook.basthon.fr/?from=https://jbduthoit.github.io/m_nsi/m/1/notebook/m_1_suites_1.ipynb')">Python et les suites...</li>
+              <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_suites_2.pdf', 'Variations de suites')">Variations de suites</li>
+              <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_suites_3.pdf', 'Limites de suite')">Limites de suite</li>
+          </ul>
+      </li>
+
+      <li class="has-sub">
+        <hr class="separator">
+        <label class="menu" for="menu8"><p class='title'>Chapitre 8 :</p><p class="subtitle">Les suites arithmétiques et les suites géométriques</p></label>
+        <input id="menu8" type="checkbox" name="menu"/>
+        <ul class="sub">
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_suites_sa.pdf', 'Les suites arithmétiques')">Les suites arithmétiques</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_suites_sg.pdf', 'Les suites géométriques')">Les suites géométriques</li>
+        </ul>
+    </li>
+
+    <!--
+    <li class="has-sub">
+        <hr class="separator">
+        <label class="menu" for="menu9"><p class='title'>Chapitre 9 :</p><p class="subtitle">Trigonométrie</p></label>
+        <input id="menu9" type="checkbox" name="menu"/>
+        <ul class="sub">
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_trigo_1.pdf', 'Cercle trigonométrique et radian')">Cercle trigonométrique et radian</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_trigo_2.pdf', 'Repérage sur le cercle')">Repérage sur le cercle</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_trigo_3.pdf', 'Cosinus et sinus')">Cosinus et sinus</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_trigo_4.pdf', 'Equations trigonométriques')">Equations trigonométriques</li>
+        </ul>
+    </li>
+
+    
+    <li class="has-sub">
+        <hr class="separator">
+        <label class="menu" for="menu10"><p class='title'>Chapitre 10 :</p><p class="subtitle">Fonction exponnetielle</p></label>
+        <input id="menu10" type="checkbox" name="menu"/>
+        <ul class="sub">
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_expo_1.pdf', 'Définition de la fonction exponentielle')">Cercle trigonométrique et radian</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_expo_2.pdf', 'Etude de la fonction exponentielle')">Repérage sur le cercle</li>
+        </ul>
+    </li>
+
+    
+    <li class="has-sub">
+        <hr class="separator">
+        <label class="menu" for="menu11"><p class='title'>Chapitre 11 :</p><p class="subtitle">Les variables aléatoires</p></label>
+        <input id="menu11" type="checkbox" name="menu"/>
+        <ul class="sub">
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_va_1.pdf', 'La notion de variable aléatoire')">La notion de variable aléatoire</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_va_1.pdf', 'Variance d\'une variable aléatoire')">Variance d'une variable aléatoire</li>
+        </ul>
+    </li>
+
+    
+    <li class="has-sub">
+        <hr class="separator">
+        <label class="menu" for="menu12"><p class='title'>Chapitre 12 :</p><p class="subtitle">Les suites arithmétiques et les suites géométriques</p></label>
+        <input id="menu12" type="checkbox" name="menu"/>
+        <ul class="sub">
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_prod_scal_1.pdf', 'Expressions du produit scalaire')">Expressions du produit scalaire</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_prod_scal_2.pdf', 'Propriétés du produit scalaire')">Propriétés du produit scalaire </li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_prod_scal_3.pdf', 'Autres expressions du produit scalaire')">Autres expressions du produit scalaire</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_prod_scal_4.pdf', 'Calculer un angle ou une longueur')">Calculer un angle ou une longueur</li>
+        </ul>
+    </li>
+        -->
+
+            <hr class="separator">
+          </ul> 
+        </div>
+        <div class="pdf-viewer" id ="viewer">
+
+        </div>
+    </div>
+</body>
+</html>
