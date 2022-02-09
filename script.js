@@ -1,4 +1,4 @@
-var lastURL = "https://findel2207.github.io/pdf/msec/rien.pdf";
+var lastURL = "https://jbduthoit.github.io/m_nsi/m/rien.pdf";
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -53,7 +53,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function()
     var adobeDCView = new AdobeDC.View({clientId: "5486c130612343e9a097b73035401f0f", divId: "viewer"});
     adobeDCView.previewFile(
    {
-      content:   {location: {url: "https://findel2207.github.io/pdf/msec/rien.pdf"}},
+      content:   {location: {url: "https://jbduthoit.github.io/m_nsi/m/rien.pdf"}},
       metaData: {fileName: "Accueil"}
    },{
     embedMode: "SIZED_CONTAINER"
