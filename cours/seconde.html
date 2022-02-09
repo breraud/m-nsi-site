@@ -3,12 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../cours.css">
+  <link rel="stylesheet" href="../cours.css">
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
 	<script src="../script.js"></script>
-
-
-    </script>
-    <title>Cours Seconde</title>
+  <title>Cours Seconde</title>
 
 </head>
 <body>
@@ -26,9 +24,9 @@
                 <label class="mobile-menu" for="toggle">☰</label>
                 <input type="checkbox" id="toggle">
                 <div class="menu-wrapper">
-                    <a href="#" class="menu-element" onclick="changeData('https://findel2207.github.io/pdf/msec/rien.pdf')">Accueil</a>
-                    <a href="#" class="menu-element" onclick="changeData('https://findel2207.github.io/pdf/msec/python.pdf')">Python</a>
-                    <a href="#" class="menu-element" onclick="changeData('https://findel2207.github.io/pdf/msec/rien.pdf')">Les maths, inutile ?</a>
+                    <a href="#" class="menu-element" onclick="changeData('https://findel2207.github.io/pdf/msec/rien.pdf', 'Accueil')">Accueil</a>
+                    <a href="#" class="menu-element" onclick="changeData('https://findel2207.github.io/pdf/msec/python.pdf', 'Python')">Python</a>
+                    <a href="#" class="menu-element" onclick="changeData('https://findel2207.github.io/pdf/msec/rien.pdf'), 'Les maths, inutile ?'">Les maths, inutile ?</a>
                 </div>
             </nav>
         </div>
@@ -95,21 +93,7 @@
         </div>
         <div class="pdf-viewer" id ="viewer">
                 <!--<object data="../test.pdf" type="application/pdf" id="pdf-window" width="600" height="500"> </object>-->
-                <!--<embed src="../test.pdf" width="500" height="375" type="application/pdf" id="pdf-window">-->
-                    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-                    <script type="text/javascript">
-                      document.addEventListener("adobe_dc_view_sdk.ready", function(){
-                        var adobeDCView = new AdobeDC.View({clientId: "5486c130612343e9a097b73035401f0f", divId: "viewer"});
-                        adobeDCView.previewFile({
-                          content:{ location:
-                            { url: "https://findel2207.github.io/pdf/msec/rien.pdf"}},
-                          metaData:{fileName: "Arithmétique 1"}
-                        },
-                        {
-                          embedMode: "SIZED_CONTAINER"
-                        });
-                      });
-                    </script>
+                <!--<embed src="../test.pdf" width="500" height="375" type="application/pdf" id="pdf-window">-->w
         </div>
     </div>
 </body>
