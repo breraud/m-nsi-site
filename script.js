@@ -1,6 +1,6 @@
 function changeData(newURL) {
 
-    if(window.screen.width > 991){
+    if(window.screen.width > 880){
         var adobeDCView = new AdobeDC.View({clientId: "5486c130612343e9a097b73035401f0f", divId: "viewer"});
         adobeDCView.previewFile({
           content:{ location:
