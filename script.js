@@ -1,6 +1,6 @@
 function changeData(newURL) {
 
- var isiPad = navigator.userAgent.match(/iPad/i) != null;
+ var isiPad = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
     
 alert(isiPad);
     
