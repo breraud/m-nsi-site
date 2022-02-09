@@ -88,13 +88,37 @@
                 </ul>
             </li>
 
+            <li class="has-sub">
+              <hr class="separator">
+              <label class="menu" for="menu5"><p class='title'>Annexe :</p><p class="subtitle">Comprendre Python</p></label>
+              <input id="menu5" type="checkbox" name="menu"/>
+              <ul class="sub">
+                  <li onclick="openURL('https://jbduthoit.github.io/m_nsi/m/2/py1.gif')">Mémento Python (affectation, type de données, affichage)</li>
+                  <li onclick="openURL('https://jbduthoit.github.io/m_nsi/m/2/py2.gif')">Mémento Python (SI ALORS, POUR , TANT QUE , les fonctions ...)</li>
+                  <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/2/m_2_python_1.pdf', 'Prise en main de Python')">Prise en main de Python</li>
+                  <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/2/m_2_python_2.pdf', 'L\'instruction conditionnelle')">L'instruction conditionnelle</li>
+                  <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/2/m_2_python_3.pdf', 'Les fonctions python')">Les fonctions python</li>
+                  <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/2/m_2_python_turtle.pdf', 'Dessiner avec python')">Dessiner avec python</li>
+              </ul>
+          </li>
+
+
+          <li class="has-sub">
+            <hr class="separator">
+            <label class="menu" for="menu6"><p class='title'>Annexe 2 :</p><p class="subtitle">TD</p></label>
+            <input id="menu6" type="checkbox" name="menu"/>
+            <ul class="sub">
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/2/m_2_identites.pdf', 'Développer avec les identités remarquables')">Développer avec les identités remarquables</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/2/m_2_factorisations.pdf', 'Factorisations')">Factorisations</li>
+            </ul>
+        </li>
 
             <hr class="separator">
           </ul> 
         </div>
         <div class="pdf-viewer" id ="viewer">
                 <!--<object data="../test.pdf" type="application/pdf" id="pdf-window" width="600" height="500"> </object>-->
-                <!--<embed src="../test.pdf" width="500" height="375" type="application/pdf" id="pdf-window">-->w
+                <!--<embed src="../test.pdf" width="500" height="375" type="application/pdf" id="pdf-window">-->
         </div>
     </div>
 </body>
