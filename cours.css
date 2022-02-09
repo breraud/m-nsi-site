@@ -182,6 +182,10 @@ ul {
   font-size: 14px;
 }
 
+.hidden{
+  display: none;
+}
+
   @media all and (max-width: 991px){
     *{
       overflow-y: auto;
