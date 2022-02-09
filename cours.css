@@ -186,6 +186,10 @@ ul {
   display: none;
 }
 
+.fullscreen{
+  width: 100%;
+}
+
   @media all and (max-width: 991px){
     *{
       overflow-y: auto;

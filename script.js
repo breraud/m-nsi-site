@@ -18,6 +18,20 @@ function checkMenu(){
 
 }
 
+function hideMenu(){
+    menu = document.getElementById('menu');
+    viewer = document.getElementById('viewer');
+
+    if(menu.classList.contains("hidden")){
+        menu.classList.remove("hidden");
+        viewer.classList.remove("fullscreen");
+    }
+    else{
+        menu.classList.add("hidden");
+        viewer.classList.add("fullscreen");
+    }
+}
+
 window.onload = (event) => {
     checkMenu();
 };
@@ -25,6 +39,13 @@ window.onload = (event) => {
 window.addEventListener("orientationchange", function() {
     sleep(2000);
     checkMenu();
+    if(menu.classList.contains("hidden")){
+        menu.classList.remove("hidden");
+        viewer.classList.remove("fullscreen");
+    }
+    if (viewer.classList.contains("ViewSDK_parentRelativeHeight")){
+        viewer.classList.remove("ViewSDK_parentRelativeHeight");
+    }
 });
 
 document.addEventListener("adobe_dc_view_sdk.ready", function()
