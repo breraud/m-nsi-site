@@ -1,15 +1,34 @@
-function changeData(newURL) {
+function isIpad(){
+    const iPad = (navigator.userAgent.match(/(iPad)/) /* iOS pre 13 */ || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) /* iPad OS 13 */);
+    const userAgent = navigator.userAgent.toLowerCase();
+    const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
+    if (iPad != false || isTablet == true){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
 
- var isiPad = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+function isLandscape(){
+    lorientation = Math.abs(window.orientation) == 90 ? 'landscape' : 'portrait';
+    if(lorientation === "landscape"){
+        return true;
+    }
+    else{
+        return false;
+}
+    }
     
-alert("Device " + isiPad);
+
+function changeData(newURL, fileName) {
     
-    if(window.screen.width > 991){
+    if(window.screen.width > 991 || (isIpad() && isLandscape())){
         var adobeDCView = new AdobeDC.View({clientId: "5486c130612343e9a097b73035401f0f", divId: "viewer"});
         adobeDCView.previewFile({
           content:{ location:
             { url: newURL}},
-          metaData:{fileName: "Arithmétique 1"}
+          metaData:{fileName: fileName}
         },
         {
           embedMode: "SIZED_CONTAINER"
@@ -23,7 +42,6 @@ alert("Device " + isiPad);
 function openURL(URL){
     window.open(URL, '_blank');
 }
-
 
 
 document.addEventListener('touchstart', handleTouchStart, false);        
