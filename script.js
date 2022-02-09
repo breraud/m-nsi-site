@@ -2,7 +2,7 @@ function changeData(newURL) {
 
  var isiPad = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
     
-alert(isiPad);
+alert("Device " + isiPad);
     
     if(window.screen.width > 991){
         var adobeDCView = new AdobeDC.View({clientId: "5486c130612343e9a097b73035401f0f", divId: "viewer"});
