@@ -1,11 +1,6 @@
 function changeData(newURL) {
 
-    /*if(window.screen.width > 991){
-        document.getElementById("pdf-window").setAttribute('data', newURL);
-    }  
-    else{
-        openURL(newURL)
-    }*/
+    if(window.screen.width > 991){
         var adobeDCView = new AdobeDC.View({clientId: "5486c130612343e9a097b73035401f0f", divId: "viewer"});
         adobeDCView.previewFile({
           content:{ location:
@@ -15,6 +10,10 @@ function changeData(newURL) {
         {
           embedMode: "SIZED_CONTAINER"
         });
+    }  
+    else{
+        openURL(newURL)
+    }
 }
 
 function openURL(URL){
