@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../cours.css">
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+	<script src="../script.js"></script>
+  <title>Cours Spé NSI Terminale</title>
+
+</head>
+<body>
+    <header>
+        <div class="top-container">
+            <div class="back-part">
+                <a href="../index.html">
+                <svg class="back-button" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="36" height="36" rx="18" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5892 11.0892C18.9147 10.7638 18.9147 10.2362 18.5892 9.91073C18.2638 9.5853 17.7361 9.5853 17.4107 9.91073L9.9107 17.4107C9.58527 17.7362 9.58527 18.2638 9.9107 18.5892L17.4107 26.0892C17.7361 26.4147 18.2638 26.4147 18.5892 26.0892C18.9147 25.7638 18.9147 25.2362 18.5892 24.9107L12.5118 18.8333H25.5C25.9602 18.8333 26.3333 18.4602 26.3333 18C26.3333 17.5398 25.9602 17.1667 25.5 17.1667H12.5118L18.5892 11.0892Z" fill="#190134"/>
+                    </svg></a>
+                <p class="course-title">NSI - Terminale</p>
+            </div>
+            <nav>
+                <label class="mobile-menu" for="toggle">☰</label>
+                <input type="checkbox" id="toggle">
+                <div class="menu-wrapper">
+                    <a href="#" class="menu-element" onclick="changeData('https://jbduthoit.github.io/m_nsi/m/rien.pdf', 'Accueil')">Accueil</a>
+                    <a href="#" class="menu-element" onclick="changeData('https://jbduthoit.github.io/m_nsi/m/2/python.pdf', 'Python')">Python</a>
+                    <a href="#" class="menu-element" onclick="changeData('https://jbduthoit.github.io/m_nsi/m/rien.pdf'), 'Les maths, inutile ?'">Logiciels</a>
+                    <a href="#" class="menu-element hidden" id="menu-btn" onclick="hideMenu()">Menu</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="body-container">
+        <div class="accordion-menu" id="menu">
+        <p class="accordion-title">Selection des cours</p>
+           <ul class="accordion">
+
+            <li class="has-sub">
+                <hr class="separator">
+                <label class="menu" for="help"><p class='title'>Aide :</p><p class="subtitle">Réussir le grand Oral !</p></label>
+                <input id="help" type="checkbox" name="menu" />
+                <ul class="sub">
+                  <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/grand_oral_1.pdf', 'Qu\'est ce que le grand oral ?')", >Qu'est ce que le grand oral ?</li>
+                  <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/grand_oral_2.pdf', 'Quelques thématiques ?')">Quelques thématiques ?</li>
+                  <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/grand_oral_3.pdf', 'Ma question est-elle bien formulée ?')">Ma question est-elle bien formulée ?</li>
+                </ul>
+              </li>
+
+              <li class="has-sub">
+                <hr class="separator">
+                <label class="menu" for="train"><p class='title'>Entraînement :</p><p class="subtitle">S'entraîner à l'épreuve pratique</p></label>
+                <input id="train" type="checkbox" name="menu" />
+                <ul class="sub">
+                  <li onclick="openURL('https://jbduthoit.github.io/m_nsi/nsi/t/epp/index_epp.html')">Qu'est ce que le grand oral ?</li>
+                </ul>
+              </li>
+
+            <li class="has-sub">
+              <hr class="separator">
+              <label class="menu" for="menu1"><p class='title'>Chapitre 1 :</p><p class="subtitle">Les bases de données relationnelles</p></label>
+              <input id="menu1" type="checkbox" name="menu" />
+              <ul class="sub">
+                <li onclick="openURL('https://www.onisep.fr/Ressources/Univers-Metier/Metiers/administrateur-administratrice-de-base-de-donnees')">Découvrir le métier d'Administrateur de bases de données</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_bdd_1.pdf', 'Découvrir les bases de données')">Découvrir les bases de données</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_bdd_2.pdf', 'Bases de données relationnelles')">Bases de données relationnelles</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_bdd_3.pdf', 'Le langage SQL sur un exemple')">Le langage SQL sur un exemple</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_bdd_4.pdf', 'TD : Et si on partait faire du ski à Val Cenis ?')">TD : Et si on partait faire du ski à Val Cenis ?</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_bdd_5.pdf', 'Python et le SQL')">Python et le SQL</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_flask.pdf', 'Tuto Flask')">Tuto Flask</li>
+              </ul>
+            </li>
+
+            <li class="has-sub">
+              <hr class="separator">
+              <label class="menu" for="menu2"><p class='title'>Chapitre 2 :</p><p class="subtitle">La récursivité</p></label>
+              <input id="menu2" type="checkbox" name="menu" />
+              <ul class="sub">
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_rec_1.pdf', 'Découvrir le principe de la récursivité')">Découvrir le principe de la récursivité</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_rec_2.pdf', 'La programmation récursive')">La programmation récursive</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_rec_3.pdf', 'Quelques exemples')">Quelques exemples</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_rec_4.pdf', 'Exercices')">Exercices</li>
+              </ul>
+            </li>
+
+            <li class="has-sub">
+                <hr class="separator">
+                <label class="menu" for="menu3"><p class='title'>Chapitre 3 :</p><p class="subtitle">Les dictionnaires</p></label>
+                <input id="menu3" type="checkbox" name="menu"/>
+                <ul class="sub">
+                    <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_dico_t.pdf', 'Les dictionnaires')">Les dictionnaires (Le cours de première)</li>
+                </ul>
+            </li>
+
+            <li class="has-sub">
+                <hr class="separator">
+                <label class="menu" for="menu4"><p class='title'>Chapitre 4 :</p><p class="subtitle">La Programmation Orientée Objet</p></label>
+                <input id="menu4" type="checkbox" name="menu"/>
+                <ul class="sub">
+                    <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_poo_1.pdf', 'Découvrir le principe de la POO')">Découvrir le principe de la POO</li>
+                    <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_poo_2.pdf', 'La POO sur un exemple (+ exercices)')">La POO sur un exemple (+ exercices)</li>
+                    <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_poo_3.pdf', 'L\'agrégation de classes')">L\'agrégation de classes</li>
+
+                </ul>
+            </li>
+
+            <li class="has-sub">
+              <hr class="separator">
+              <label class="menu" for="menu5"><p class='title'>Chapitre 5 :</p><p class="subtitle">Les structures linéaires</p></label>
+              <input id="menu5" type="checkbox" name="menu"/>
+              <ul class="sub">
+                  <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_sl_1.pdf', 'Types abstraits...')">Types abstraits...</li>
+                  <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_sl_2.pdf', 'Comment implémenter une liste ?')">Comment implémenter une liste ?</li>
+                  <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_sl_3.pdf', 'Implémentation des listes chaînées')">Implémentation des listes chaînées</li>
+                  <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_sl_4.pdf', 'Implémenter une pile')">Implémenter une pile</li>
+                  <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_sl_5.pdf', 'Implémentation une file')">Implémentation une file</li>
+                  <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_sl_td.pdf', 'Les labyrinthes')">Les labyrinthes</li>
+                </ul>
+          </li>
+
+          <li class="has-sub">
+            <hr class="separator">
+            <label class="menu" for="menu6"><p class='title'>Chapitre 6 :</p><p class="subtitle">Diviser pour régner</p></label>
+            <input id="menu6" type="checkbox" name="menu"/>
+            <ul class="sub">
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_dpr_1.pdf', 'Intro')">Intro</li>
+                <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_dpr_2.pdf', 'Le tri fusion ?')">Le tri fusion ?</li>
+            </ul>
+        </li>
+
+        <li class="has-sub">
+          <hr class="separator">
+          <label class="menu" for="menu7"><p class='title'>Chapitre 7 :</p><p class="subtitle">Les arbres</p></label>
+          <input id="menu7" type="checkbox" name="menu"/>
+          <ul class="sub">
+              <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_arbres_1.pdf', 'Les arbres')">Les arbres</li>
+              <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_arbres_2.pdf', 'Les arbres binaires')">Les arbres binaires</li>
+              <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_arbres_3.pdf', 'Les arbres binaires de recherche')">Les arbres binaires de recherche</li>
+          </ul>
+      </li>
+
+    
+      <li class="has-sub">
+        <hr class="separator">
+        <label class="menu" for="menu8"><p class='title'>Chapitre 8 :</p><p class="subtitle">Algorithmes sur les arbres</p></label>
+        <input id="menu8" type="checkbox" name="menu"/>
+        <ul class="sub">
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_linux_1.pdf', 'Algorithme sur les arbres binaire')">Algorithme sur les arbres binaire</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_linux_2.pdf', 'Algorithmes sur les arbres binaires de recherche')">Algorithmes sur les arbres binaires de recherche</li>
+        </ul>
+    </li>
+
+    
+    <li class="has-sub">
+        <hr class="separator">
+        <label class="menu" for="menu9"><p class='title'>Chapitre 9 :</p><p class="subtitle">Les réseaux</p></label>
+        <input id="menu9" type="checkbox" name="menu"/>
+        <ul class="sub">
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_reseaux_1.pdf', 'Intro sur les réseaux')">Intro sur les réseaux</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_reseaux_2.pdf', 'Le modèle OSI et les 7 couches')">Le modèle OSI et les 7 couches</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_reseaux_3.pdf', 'Comprendre les adresses IP')">Comprendre les adresses IP</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_reseaux_4.pdf', 'Le modèle TCP/IP')">Le modèle TCP/IP</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_reseaux_5.pdf', 'Simuler un réseau')">Simuler un réseau</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_reseaux_6.pdf', 'Annexes')">Annexes</li>
+        </ul>
+    </li>
+
+    
+    <li class="has-sub">
+        <hr class="separator">
+        <label class="menu" for="menu10"><p class='title'>Chapitre 10 :</p><p class="subtitle">Le routage</p></label>
+        <input id="menu10" type="checkbox" name="menu"/>
+        <ul class="sub">
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_routage_1.pdf', 'Introduction historique')">Introduction historique</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_routage_2.pdf', 'Rappels de première')">Rappels de première</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_routage_3.pdf', 'Le routage')">Le routage</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_routage_4.pdf', 'Protocole RIP')">Protocole RIP</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_routage_5.pdf', 'Protocole OSPF')">Protocole OSPF</li>
+        </ul>
+    </li>
+
+    
+    <li class="has-sub">
+        <hr class="separator">
+        <label class="menu" for="menu11"><p class='title'>Chapitre 11 :</p><p class="subtitle">Paradigmes de programmation</p></label>
+        <input id="menu11" type="checkbox" name="menu"/>
+        <ul class="sub">
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_paradigme_1.pdf', 'Paradigmes de programmation')">Paradigmes de programmation</li>
+        </ul>
+    </li>
+
+    <li class="has-sub">
+        <hr class="separator">
+        <label class="menu" for="menu12"><p class='title'>Chapitre 12 :</p><p class="subtitle">La sécurisation</p></label>
+        <input id="menu12" type="checkbox" name="menu"/>
+        <ul class="sub">
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_securisation_1.pdf', 'Intro')">Intro</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_securisation_2.pdf', 'Le chiffrement symétrique')">Le chiffrement symétrique</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_securisation_3.pdf', 'Le chiffrement asymétrique')">Le chiffrement asymétrique</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_securisation_4.pdf', 'Authentification')">Authentification</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/t/nsi_t_securisation_5.pdf', 'Le protocole https')">Le protocole https</li>
+        </ul>
+    </li>
+        <!-- -->
+
+            <hr class="separator">
+          </ul> 
+        </div>
+        <div class="pdf-viewer" id ="viewer">
+
+        </div>
+    </div>
+</body>
+</html>

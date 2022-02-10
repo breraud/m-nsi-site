@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="../cours.css">
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
 	<script src="../script.js"></script>
-  <title>Cours Spé Première</title>
+  <title>Cours Spé NSI Première</title>
 
 </head>
 <body>
@@ -18,7 +18,7 @@
                     <rect width="36" height="36" rx="18" fill="white"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5892 11.0892C18.9147 10.7638 18.9147 10.2362 18.5892 9.91073C18.2638 9.5853 17.7361 9.5853 17.4107 9.91073L9.9107 17.4107C9.58527 17.7362 9.58527 18.2638 9.9107 18.5892L17.4107 26.0892C17.7361 26.4147 18.2638 26.4147 18.5892 26.0892C18.9147 25.7638 18.9147 25.2362 18.5892 24.9107L12.5118 18.8333H25.5C25.9602 18.8333 26.3333 18.4602 26.3333 18C26.3333 17.5398 25.9602 17.1667 25.5 17.1667H12.5118L18.5892 11.0892Z" fill="#190134"/>
                     </svg></a>
-                <p class="course-title">Maths - Première</p>
+                <p class="course-title">NSI - Première</p>
             </div>
             <nav>
                 <label class="mobile-menu" for="toggle">☰</label>
@@ -37,6 +37,15 @@
         <div class="accordion-menu" id="menu">
         <p class="accordion-title">Selection des cours</p>
            <ul class="accordion">
+
+            <li class="has-sub">
+                <hr class="separator">
+                <label class="menu" for="projet"><p class='title'>Projets d'élèves</p><p class="subtitle">HTML - CSS</p></label>
+                <input id="projet" type="checkbox" name="menu" />
+                <ul class="sub">
+                  <li onclick="openURL('https://jbduthoit.github.io/m_nsi/nsi/1/projets/index')">Travail des élèves</li>
+                </ul>
+              </li>
 
             <li class="has-sub">
               <hr class="separator">
@@ -130,8 +139,11 @@
         <label class="menu" for="menu8"><p class='title'>Chapitre 8 :</p><p class="subtitle">Système d'exploitation</p></label>
         <input id="menu8" type="checkbox" name="menu"/>
         <ul class="sub">
-            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_suites_sa.pdf', 'Les suites arithmétiques')">Les suites arithmétiques</li>
-            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_suites_sg.pdf', 'Les suites géométriques')">Les suites géométriques</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_linux_1.pdf', 'Système d\'exploitation Linux: définition')">Système d'exploitation Linux: définition</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_linux_2.pdf', 'Lignes de commande')">Lignes de commande</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_td_linux_1.pdf'), 'Découvrir un émulateur en ligne'">Découvrir un émulateur en ligne</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_td_1_linux_2.pdf', 'TD sur les lignes de commandes')">TD sur les lignes de commandes</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_td_1_linux_3.pdf', 'TD sur la gestion des droits')">TD sur la gestion des droits</li>
         </ul>
     </li>
 
@@ -141,10 +153,11 @@
         <label class="menu" for="menu9"><p class='title'>Chapitre 9 :</p><p class="subtitle">Les données structurées</p></label>
         <input id="menu9" type="checkbox" name="menu"/>
         <ul class="sub">
-            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_trigo_1.pdf', 'Cercle trigonométrique et radian')">Cercle trigonométrique et radian</li>
-            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_trigo_2.pdf', 'Repérage sur le cercle')">Repérage sur le cercle</li>
-            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_trigo_3.pdf', 'Cosinus et sinus')">Cosinus et sinus</li>
-            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_trigo_4.pdf', 'Equations trigonométriques')">Equations trigonométriques</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_donnees_1.pdf', 'Lire, écrire et modifier un fichier txt avec python')">Lire, écrire et modifier un fichier txt avec python</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_donnees_2.pdf', 'Les fichiers .csv')">Les fichiers .csv</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_donnees_3.pdf', 'Importer des données depuis un fichier csv')">Importer des données depuis un fichier csv</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_donnees_4.pdf', 'Savoir rechercher et trier')">Savoir rechercher et trier</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_donnees_5.pdf', 'Savoir réunir et fusionner deux tables')">Savoir réunir et fusionner deux tables</li>
         </ul>
     </li>
 
@@ -154,8 +167,12 @@
         <label class="menu" for="menu10"><p class='title'>Chapitre 10 :</p><p class="subtitle">Les réseaux</p></label>
         <input id="menu10" type="checkbox" name="menu"/>
         <ul class="sub">
-            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_expo_1.pdf', 'Définition de la fonction exponentielle')">Cercle trigonométrique et radian</li>
-            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_expo_2.pdf', 'Etude de la fonction exponentielle')">Repérage sur le cercle</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_reseaux_1.pdf', 'Intro sur les réseaux')">Intro sur les réseaux</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_reseaux_2.pdf', 'Le modèle OSI et les 7 couches')">Le modèle OSI et les 7 couches</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_reseaux_3.pdf', 'Comprendre les adresses IP')">Comprendre les adresses IP</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_reseaux_4.pdf', 'Le modèle TCP/IP')">Le modèle TCP/IP</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_reseaux_5.pdf', 'Simuler un réseau')">Simuler un réseau</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_reseaux_6.pdf', 'Annexes')">Annexes</li>
         </ul>
     </li>
 
@@ -165,8 +182,12 @@
         <label class="menu" for="menu11"><p class='title'>Chapitre 11 :</p><p class="subtitle">Intéraction Homme-Machine</p></label>
         <input id="menu11" type="checkbox" name="menu"/>
         <ul class="sub">
-            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_va_1.pdf', 'La notion de variable aléatoire')">La notion de variable aléatoire</li>
-            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/m/1/m_1_va_1.pdf', 'Variance d\'une variable aléatoire')">Variance d'une variable aléatoire</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_ihm_1.pdf', 'Intro')">Intro</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_ihm_2.pdf', 'HTML, CSS et formulaires')">HTML, CSS et formualires</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_ihm_3.pdf', 'Le JavaScript')">Le JavaScript</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_ihm_4.pdf', 'Requête HTTP')">Requête HTTP</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_ihm_5.pdf', 'Exemple de formulaire')">Exemple de formulaire</li>
+            <li onclick="changeData('https://jbduthoit.github.io/m_nsi/nsi/1/nsi_1_ihm_6.pdf', 'Hors programme: Développement web côté serveur')">Hors programme: Développement web côté serveur</li>
         </ul>
     </li>
 
