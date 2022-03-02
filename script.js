@@ -11,7 +11,13 @@ function checkMenu(){
     if(isIpad() && isLandscape()){
         return_btn.onclick = (event) => {
             hideMenu();
-            return_btn.classList.add("returned");
+            if(return_btn.classList.contains("returned")){
+                return_btn.classList.remove("returned");
+            }
+            else{
+                return_btn.classList.add("returned");
+            }
+            
         };
         menu_btn.onclick = (event) => {
             window.location.replace('../index.html');
