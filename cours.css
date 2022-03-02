@@ -21,6 +21,11 @@ html, body{
     cursor: pointer;
 }
 
+.returned{
+  transform: rotate(0.5turn);
+  transform-origin: center;
+}
+
 .back-part{
   display: flex;
   align-items: center;

@@ -11,6 +11,7 @@ function checkMenu(){
     if(isIpad() && isLandscape()){
         return_btn.onclick = (event) => {
             hideMenu();
+            return_btn.classList.add("returned");
         };
         menu_btn.onclick = (event) => {
             window.location.replace('../index.html');
@@ -18,18 +19,25 @@ function checkMenu(){
         menu_btn.classList.remove("hidden");
     }
     else if(btn.classList.contains("hidden")){
+        return_button();
         return_btn.onclick = (event) => {
             window.location.replace('../index.html');
         };
         return;
     }
     else{
+        return_button();
         return_btn.onclick = (event) => {
             window.location.replace('../index.html');
         };
         menu_btn.classList.add("hidden");
     }
+}
 
+function return_button(){
+    if(return_button.classList.contains("returned")){
+        return_button.classList.remove("returned");
+    }
 }
 
 function hideMenu(){
