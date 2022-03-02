@@ -1,3 +1,4 @@
+//This var be modified at each modification of PDF, First value is the home webpage ...
 var lastURL = "https://jbduthoit.github.io/m_nsi/m/rien.pdf";
 
 function sleep(ms) {
@@ -5,15 +6,28 @@ function sleep(ms) {
 }
 
 function checkMenu(){
-    let btn = document.getElementById("menu-btn");
+    let menu_btn = document.getElementById("menu-btn");
+    let return_btn = document.getElementById("back-btn");
     if(isIpad() && isLandscape()){
-        btn.classList.remove("hidden");
+        return_btn.onclick = (event) => {
+            hideMenu();
+        };
+        menu_btn.onclick = (event) => {
+            window.location.replace('../index.html');
+        };
+        menu_btn.classList.remove("hidden");
     }
     else if(btn.classList.contains("hidden")){
+        return_btn.onclick = (event) => {
+            window.location.replace('../index.html');
+        };
         return;
     }
     else{
-        btn.classList.add("hidden");
+        return_btn.onclick = (event) => {
+            window.location.replace('../index.html');
+        };
+        menu_btn.classList.add("hidden");
     }
 
 }
