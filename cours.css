@@ -57,17 +57,24 @@ nav {
 }
 
 .menu-element{
+  position: relative;
   overflow-x: hidden;
   display: inline;
   white-space: nowrap;
   font-family: 'Salsa', cursive;
-  text-decoration: none;
+  text-decoration: underline 0.1em rgba(0, 0, 0, 0);
+  transition: text-decoration-color 300ms;
+  transform-origin: center;
   margin-top: 5px;
   font-size: 22px;
   width: 90%;
   text-align: center;
-  text-decoration: none;
   color: black;
+}
+
+
+.menu-element:hover{
+  text-decoration-color: rgba(0, 0, 0, 1);
 }
 
 .mobile-menu, #toggle{

@@ -24,7 +24,7 @@ function checkMenu(){
         };
         menu_btn.classList.remove("hidden");
     }
-    else if(btn.classList.contains("hidden")){
+    else if(return_btn.classList.contains("hidden")){
         return_button();
         return_btn.onclick = (event) => {
             window.location.replace('../index.html');
@@ -41,8 +41,9 @@ function checkMenu(){
 }
 
 function return_button(){
-    if(return_button.classList.contains("returned")){
-        return_button.classList.remove("returned");
+    let return_btn = document.getElementById("back-btn");
+    if(return_btn.classList.contains("returned")){
+        return_btn.classList.remove("returned");
     }
 }
 
