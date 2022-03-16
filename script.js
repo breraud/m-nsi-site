@@ -1,5 +1,26 @@
 //This var be modified at each modification of PDF, First value is the home pdf ...
-var lastURL = "https://jbduthoit.github.io/m_nsi/m/rien.pdf";
+var actualURL = document.location.href.slice(43,-5);
+
+//currently testing this functionnality
+switch(actualURL){
+    case "mspe":
+        var lastURL = "https://jbduthoit.github.io/m_nsi/m/rien.pdf";
+        break;
+    case "seconde" :
+        var lastURL = "https://jbduthoit.github.io/m_nsi/m/rien.pdf";
+        break;
+    case "nsispe" :
+        var lastURL = "https://jbduthoit.github.io/m_nsi/m/rien.pdf";
+        break;
+    case "termnsispe" :
+        var lastURL = "https://jbduthoit.github.io/m_nsi/m/rien.pdf";
+        break;
+    default:
+        alert("URL INCONNUE")
+        break;
+}
+
+
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -90,7 +111,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function()
     var adobeDCView = new AdobeDC.View({clientId: "5486c130612343e9a097b73035401f0f", divId: "viewer"});
     adobeDCView.previewFile(
    {
-      content:   {location: {url: "https://jbduthoit.github.io/m_nsi/m/rien.pdf"}},
+      content:   {location: {url: lastURL}},
       metaData: {fileName: "Accueil"}
    },{
     //embedMode: "SIZED_CONTAINER"
