@@ -63,6 +63,14 @@ function hideMenu(){
 
 window.onload = (event) => {
     checkMenu();
+
+    if (isIpad()){
+        var test = document.getElementsByTagName("a");
+        for (i = 0; i <= 3; i++){
+            console.log(i);
+            test[i].classList.add("no-decoration");
+        }
+    }
 };
 
 window.addEventListener("orientationchange", function() {

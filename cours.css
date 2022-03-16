@@ -72,6 +72,9 @@ nav {
   color: black;
 }
 
+.no-decoration{
+  text-decoration: none;
+}
 
 .menu-element:hover{
   text-decoration-color: rgba(0, 0, 0, 1);
@@ -102,7 +105,9 @@ li{
 .sub > li {
   height: 0;
   overflow: hidden;
+  transition: ease .1s;
 }
+
 
 .menu{
     cursor: pointer;
@@ -134,6 +139,7 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 input:checked + .sub > li {
+  
   height: 90%;
   margin: 5px;
   cursor: pointer;
