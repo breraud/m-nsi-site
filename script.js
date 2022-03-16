@@ -1,4 +1,4 @@
-//This var be modified at each modification of PDF, First value is the home webpage ...
+//This var be modified at each modification of PDF, First value is the home pdf ...
 var lastURL = "https://jbduthoit.github.io/m_nsi/m/rien.pdf";
 
 function sleep(ms) {
@@ -93,7 +93,8 @@ document.addEventListener("adobe_dc_view_sdk.ready", function()
       content:   {location: {url: "https://jbduthoit.github.io/m_nsi/m/rien.pdf"}},
       metaData: {fileName: "Accueil"}
    },{
-    embedMode: "SIZED_CONTAINER"
+    //embedMode: "SIZED_CONTAINER"
+    defaultViewMode: "FIT_WIDTH", showAnnotationTools: false, showLeftHandPanel: false
   });
 });
 
@@ -133,7 +134,8 @@ function changeData(newURL, filename) {
           metaData:{fileName: filename}
         },
         {
-          embedMode: "SIZED_CONTAINER"
+            //embedMode: "SIZED_CONTAINER"
+            defaultViewMode: "FIT_WIDTH", showAnnotationTools: false, showLeftHandPanel: false
         });
     }  
     else{
