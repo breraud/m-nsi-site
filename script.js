@@ -1,5 +1,11 @@
 //This var be modified at each modification of PDF, First value is the home pdf ...
-var actualURL = document.location.href.slice(43,-5);
+if(document.location.href.includes("#", -1)){
+    var actualURL = document.location.href.slice(43,-6);
+}
+else{
+    var actualURL = document.location.href.slice(43,-5);
+}
+
 
 //currently testing this functionnality
 switch(actualURL){
