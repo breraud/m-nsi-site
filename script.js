@@ -1,33 +1,4 @@
-//This var be modified at each modification of PDF, First value is the home pdf ...
-if(document.location.href.includes("#", -1)){
-    var actualURL = document.location.href.slice(43,-6);
-}
-else{
-    var actualURL = document.location.href.slice(43,-5);
-}
-
-
-//currently testing this functionnality
-switch(actualURL){
-    case "mspe":
-        var lastURL = "https://jbduthoit.github.io/m_nsi/m/rien.pdf";
-        break;
-    case "seconde" :
-        var lastURL = "https://jbduthoit.github.io/m_nsi/m/rien.pdf";
-        break;
-    case "nsispe" :
-        var lastURL = "https://jbduthoit.github.io/m_nsi/m/rien.pdf";
-        break;
-    case "termnsispe" :
-        var lastURL = "https://jbduthoit.github.io/m_nsi/m/rien.pdf";
-        break;
-    default:
-        alert("URL INCONNUE")
-        break;
-}
-
-
-
+//All Functions
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -88,43 +59,6 @@ function hideMenu(){
     }
 }
 
-window.onload = (event) => {
-    checkMenu();
-
-    if (isIpad()){
-        var test = document.getElementsByTagName("a");
-        for (i = 0; i <= 3; i++){
-            console.log(i);
-            test[i].classList.add("no-decoration");
-        }
-    }
-};
-
-window.addEventListener("orientationchange", function() {
-    sleep(2000);
-    checkMenu();
-    if(menu.classList.contains("hidden")){
-        menu.classList.remove("hidden");
-        viewer.classList.remove("fullscreen");
-    }
-    if (viewer.classList.contains("ViewSDK_parentRelativeHeight")){
-        viewer.classList.remove("ViewSDK_parentRelativeHeight");
-    }
-});
-
-document.addEventListener("adobe_dc_view_sdk.ready", function()
-{
-    var adobeDCView = new AdobeDC.View({clientId: "5486c130612343e9a097b73035401f0f", divId: "viewer"});
-    adobeDCView.previewFile(
-   {
-      content:   {location: {url: lastURL}},
-      metaData: {fileName: "Accueil"}
-   },{
-    //embedMode: "SIZED_CONTAINER"
-    defaultViewMode: "FIT_WIDTH", showAnnotationTools: false, showLeftHandPanel: false
-  });
-});
-
 function isIpad(){
     const iPad = (navigator.userAgent.match(/(iPad)/) /* iOS pre 13 */ || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) /* iPad OS 13 */);
     const userAgent = navigator.userAgent.toLowerCase();
@@ -173,3 +107,75 @@ function changeData(newURL, filename) {
 function openURL(URL){
     window.open(URL, '_blank');
 }
+
+
+//Declarating Global Variables
+
+//This var be modified at each modification of PDF, First value is the home pdf ...
+if(document.location.href.includes("#", -1)){
+    var actualURL = document.location.href.slice(43,-6);
+}
+else{
+    var actualURL = document.location.href.slice(43,-5);
+}
+
+//currently testing this functionnality
+switch(actualURL){
+    case "mspe":
+        var lastURL = "https://jbduthoit.github.io/m_nsi/m/rien.pdf";
+        break;
+    case "seconde" :
+        var lastURL = "https://jbduthoit.github.io/m_nsi/m/rien.pdf";
+        break;
+    case "nsispe" :
+        var lastURL = "https://jbduthoit.github.io/m_nsi/m/rien.pdf";
+        break;
+    case "termnsispe" :
+        var lastURL = "https://jbduthoit.github.io/m_nsi/m/rien.pdf";
+        break;
+    default:
+        alert("URL INCONNUE")
+        break;
+}
+
+
+//Declarating all events
+
+window.onload = (event) => {
+    checkMenu();
+
+    if (isIpad()){
+        var test = document.getElementsByTagName("a");
+        for (i = 0; i <= 3; i++){
+            console.log(i);
+            test[i].classList.add("no-decoration");
+        }
+    }
+};
+
+window.addEventListener("orientationchange", function() {
+    sleep(2000);
+    checkMenu();
+    if(menu.classList.contains("hidden")){
+        menu.classList.remove("hidden");
+        viewer.classList.remove("fullscreen");
+    }
+    if (viewer.classList.contains("ViewSDK_parentRelativeHeight")){
+        viewer.classList.remove("ViewSDK_parentRelativeHeight");
+    }
+});
+
+document.addEventListener("adobe_dc_view_sdk.ready", function()
+{
+    var adobeDCView = new AdobeDC.View({clientId: "5486c130612343e9a097b73035401f0f", divId: "viewer"});
+    adobeDCView.previewFile(
+   {
+      content:   {location: {url: lastURL}},
+      metaData: {fileName: "Accueil"}
+   },{
+    //embedMode: "SIZED_CONTAINER"
+    defaultViewMode: "FIT_WIDTH", showAnnotationTools: false, showLeftHandPanel: false
+  });
+});
+
+

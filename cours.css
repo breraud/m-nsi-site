@@ -1,5 +1,9 @@
+/*Fonts importing*/
+
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
+/*Whole document attributes*/
 
 *{
   box-sizing: border-box;
@@ -11,9 +15,33 @@ html, body{
   width: 100%;
 }
 
+/*Big Container parts*/
 .top-container{
   display:flex;
-  height: 60px;
+  height:60px;
+}
+
+.body-container{
+  display: flex;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  min-height: calc(100vh - 61px);
+  max-height: calc(100vh - 61px);
+}
+
+/*NavBar parts*/
+
+
+/*Left parts*/
+.back-part{
+  display: flex;
+  align-items: center;
+  min-width: 280px;
+  width: 280px;
+  height: 100%;
+  padding:10px;
+  background-color: #222831;
 }
 
 .back-button{
@@ -26,16 +54,6 @@ html, body{
   transform-origin: center;
 }
 
-.back-part{
-  display: flex;
-  align-items: center;
-  min-width: 280px;
-  width: 280px;
-  height: 100%;
-  padding:10px;
-  background-color: #222831;
-}
-
 .course-title{
   color: white;
   font-family: 'Salsa', cursive;
@@ -44,6 +62,9 @@ html, body{
   padding-left: 20px;
   font-size: 20px;
 }
+
+
+/*Right parts*/
 
 nav {
   background-color: #F6E9E9;
@@ -72,16 +93,41 @@ nav {
   color: black;
 }
 
-.no-decoration{
-  text-decoration: none;
-}
-
 .menu-element:hover{
   text-decoration-color: rgba(0, 0, 0, 1);
 }
 
+.no-decoration{ /*Used for desactivate underline on iPad*/
+  text-decoration: none;
+}
+
 .mobile-menu, #toggle{
     display: none;
+}
+
+
+/*Body part*/
+
+
+/*Left accordionn menu*/
+
+.accordion-menu{
+  background-color: #EEEEEE;
+}
+
+.accordion-title{
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Salsa', cursive;
+  font-size: 18px;
+}
+
+.accordion{
+  min-width: 280px;
+  width: 280px;
+  height: calc(100vh - 119px);
+  padding-left: 0px;
+  overflow-y: auto;
 }
 
 .has-sub{
@@ -92,70 +138,20 @@ nav {
 ul{
   margin: 0;
   padding: 0;
+  padding-left: 5px;
+  text-decoration: none;
+  font-family: 'Salsa', cursive;
+  font-size: 14px;
 }
   
 li{
   display: block
 }
-  
-.accordion-menu{
-  background-color: #EEEEEE;
 
-}
 .sub > li {
   height: 0;
   overflow: hidden;
   transition: ease .1s;
-}
-
-
-.menu{
-    cursor: pointer;
-    display: 	flex;
-    flex-direction: column;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.body-container{
-    display: flex;
-    padding: 0;
-    border: 0;
-    margin: 0;
-    min-height: calc(100vh - 61px);
-    max-height: calc(100vh - 61px);
-}
-
-.accordion{
-    min-width: 280px;
-    width: 280px;
-    height: calc(100vh - 119px);
-    padding-left: 0px;
-    overflow-y: auto;
-}
-
-input[type="radio"], input[type="checkbox"] {
-  display: none
-}
-
-input:checked + .sub > li {
-  
-  height: 90%;
-  margin: 5px;
-  cursor: pointer;
-}
-
-input:checked + .sub{
-  margin-top: 10px;
-}
-
-.pdf-viewer{
-  padding: 0;
-  border: 0;
-  margin: 0;
-  width: calc(100vw - 280px);
-  height: calc(100vh - 60px);
-  background-color: #333333;
 }
 
 .separator{
@@ -163,19 +159,12 @@ input:checked + .sub{
   width: 100%;
 }
 
-#pdf-window{
-  padding: 0;
-  border: 0;
-  margin: 0;
-  width: 100%;
-  height: calc(100vh - 60px);
-}
-
-.accordion-title{
-  text-align: center;
-  text-decoration: none;
-  font-family: 'Salsa', cursive;
-  font-size: 18px;
+.menu{
+  cursor: pointer;
+  display: 	flex;
+  flex-direction: column;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .title{
@@ -196,12 +185,44 @@ input:checked + .sub{
   color: #a9a9a9;
 }
 
-ul {
-  padding-left: 5px;
-  text-decoration: none;
-  font-family: 'Salsa', cursive;
-  font-size: 14px;
+
+input[type="radio"], input[type="checkbox"] {
+  display: none
 }
+
+input:checked + .sub > li {
+  
+  height: 90%;
+  margin: 5px;
+  cursor: pointer;
+}
+
+input:checked + .sub{
+  margin-top: 10px;
+}
+
+
+/*PDF viewer part*/
+
+.pdf-viewer{
+  padding: 0;
+  border: 0;
+  margin: 0;
+  width: calc(100vw - 280px);
+  height: calc(100vh - 60px);
+  background-color: #333333;
+}
+
+#pdf-window{
+  padding: 0;
+  border: 0;
+  margin: 0;
+  width: 100%;
+  height: calc(100vh - 60px);
+}
+
+
+/*JS Needed class*/
 
 .hidden{
   display: none;
@@ -211,80 +232,95 @@ ul {
   width: 100%;
 }
 
-  @media all and (max-width: 991px){
-    *{
-      overflow-y: auto;
-    }
 
-    #pdf-window{
-      display: none;
-    }
+/*Mobile Menu, (c'est le bazar la bas, faut pas toucher ...)*/
 
-    .pdf-viewer{
-      display: none;
-    }
+@media all and (max-width: 991px){
 
-    .course-title{
-        text-align: center;
-    }
+/*Whole Page*/
 
-    .back-part{
-        width: 100%;
-    }
+*{
+  overflow-y: auto;
+}
 
-    nav
-    {
-        display: flex;
-        width: 60%;
-        height: 60px;
-    }
- 
-    nav .menu-wrapper 
-    {
-        display: none;
-    }
- 
-    .menu-element{
-        width: 100%;
-        border: white;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        border-radius: 1px;
-    }
 
-    .mobile-menu 
-    {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        font-size: 40px;
-        color: black;
-        cursor: pointer;
-        overflow-y: hidden;
-    }
+/*Big Container part*/
 
-    #toggle:checked + .menu-wrapper {
-        display: flex;
-        flex-direction: column;
-        position:absolute; 
-        left:0px; 
-        top:60px;
-        width: 100%;
-        background-color: #F6E9E9;
-    }
+.body-container{
+  height: calc(100vh - 83px);
+}
 
-    .body-container{
-      height: calc(100vh - 83px);
-    }
 
-    .accordion-menu{
-      height: 100%;
-    }
+/*Top Menu*/
 
-    .accordion{
-        width: 100vw;
-        overflow-y: auto;
-    }
+.course-title{
+  text-align: center;
+}
+
+.back-part{
+  width: 100%;
+}
+
+nav
+{
+    display: flex;
+    width: 60%;
+    height: 60px;
+}
+
+nav .menu-wrapper 
+{
+    display: none;
+}
+
+.menu-element{
+  width: 100%;
+  border: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 1px;
+}
+
+.mobile-menu{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 40px;
+  color: black;
+  cursor: pointer;
+  overflow-y: hidden;
+}
+
+#toggle:checked + .menu-wrapper{
+  display: flex;
+  flex-direction: column;
+  position:absolute; 
+  left:0px; 
+  top:60px;
+  width: 100%;
+  background-color: #F6E9E9;
+}
+
+
+/*Main content*/
+
+#pdf-window{
+  display: none;
+}
+
+.pdf-viewer{
+  display: none;
+}
+
+.accordion-menu{
+  height: 100%;
+}
+
+.accordion{
+    width: 100vw;
+    overflow-y: auto;
+}
+
 }
